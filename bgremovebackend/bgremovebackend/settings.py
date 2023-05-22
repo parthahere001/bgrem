@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "mainapp",
     "bootstrap5",
+    "rembg"
 
 ]
 
@@ -80,8 +81,8 @@ WSGI_APPLICATION = "bgremovebackend.wsgi.application"
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'foodie_db',
-        'USER': 'djangouser',
+        'NAME': 'tdb',
+        'USER': 'tdbuser',
         'PASSWORD': 'password',
         'HOST':'localhost',
         'PORT':'3306',

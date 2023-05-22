@@ -5,5 +5,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.homeView, name = 'homeView'),
-  
+    path('uploadimage/', views.uploadImageView, name ='uploadImage')
 ]
