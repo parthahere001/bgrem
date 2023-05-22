@@ -1,21 +1,31 @@
 {% load static %}{% load bootstrap5 %}{% bootstrap_css %}{% bootstrap_javascript %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
 
-<div class="container text-center mb-5 mt-5">
-    <div class="row">
-        <div class="col-md-12">
-            <h4><a href="https://plugins.krajee.com/file-input" target="_blank"><b>File Upload With Sortable, Remove Options</b></a></h4>
-        </div>
-    </div>
-</div>
+<h2>File Upload</h2>
+<p class="lead"></b></p>
 
-<section class="bg-diffrent">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-8">
-                <div class="file-upload-contain">
-                    <input id="multiplefileupload" type="file" accept=".jpg,.gif,.png" multiple />
-                </div>
-            </div>
-        </div>
+<!-- Upload  -->
+
+       
+<form action="uploadimage/"  id="file-upload-form" class="uploader form" method="post" enctype="multipart/form-data" name="file-upload-form">
+   {% csrf_token %}
+  <input id="file-upload" type="file" accept=".jpg,.png" name="fileUpload"  />
+
+  <label for="file-upload" id="file-drag">
+    <img id="file-image" src="#" alt="Preview" class="hidden">
+    <div id="start">
+      <i class="fa fa-download" aria-hidden="true"></i>
+      <div>Select a file or drag here</div>
+      <div id="notimage" class="hidden">Please select an image</div>
+      <span id="file-upload-btn" class="btn btn-primary">Select a file</span>
     </div>
-</section>
+    <div id="response" class="hidden">
+      <div id="messages"></div>
+      <progress class="progress" id="file-progress" value="0">
+        <span>0</span>
+      </progress>
+    </div>
+    
+  </label>
+  <div><button class="learn-ai submit" value="Upload" type="submit" style="margin-top: 8px; background-color: #454cad; border:2px solid black; color:white; font-weight:bold; border-radius:8px;">Upload Submission</div>
+</form>
