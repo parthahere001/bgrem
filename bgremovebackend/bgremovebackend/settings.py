@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-uuw3)zf0va3g_qni(u=v&v*bq3i8)k^af^l)(5%qjr^d3njl!(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,15 +81,17 @@ WSGI_APPLICATION = "bgremovebackend.wsgi.application"
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tdb',
-        'USER': 'tdbuser',
-        'PASSWORD': 'password',
-        'HOST':'localhost',
+        'NAME': 'mydb',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST':'',   
+
+
         'PORT':'3306',
     }
 }
 
-
+CSRF_COOKIE_DOMAIN = None
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

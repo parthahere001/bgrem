@@ -6,9 +6,13 @@ from django.http import HttpResponse
 from django.utils.datastructures import MultiValueDictKeyError
 from .models import imageStorageModel
 from django.core.files.base import ContentFile
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def homeView(request):
     return render(request,'home.html')
+
+@csrf_exempt
 def uploadImageView(request):
     if request.method == "POST":
         try:
