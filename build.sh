@@ -4,7 +4,7 @@ set -o errexit
 
 poetry install
 poetry lock --no-update
-
+poetry lock
 python3 manage.py collectstatic --no-input
 python3 manage.py migrate
 python3 manage.py createsuperuser
