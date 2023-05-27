@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bgremproject"
+version = "0.1.0"
+description = ""
+authors = ["parthahere001 <parthahere001.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.1"
+whitenoise = {extras = ["brotli"], version = "^6.4.0"}
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
