@@ -1,5 +1,6 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url(https://fonts.googleapis.com/css2?family=Lobster&display=swap);
 html, body, * {
   box-sizing: border-box;
   font-size: 16px;
@@ -8,19 +9,25 @@ html, body, * {
 html, body {
   height: 100%;
   text-align: center;
+
 }
 
 body {
   padding: 2rem;
   background: #f8f8f8;
+  background-image: url("bg.jpeg");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: 1920px 1080px;
+  position: relative;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 26px;
-  line-height: 1;
-  color: #454cad;
+h1 {
+  font-family: 'Lobster', cursive;
+  /* line-height: 1; */
+  color: #03838F;
   margin-bottom: 0;
+  margin-top: 25px;
 }
 
 p {
@@ -32,7 +39,8 @@ p {
 .uploader {
   display: block;
   clear: both;
-  margin: 0 auto;
+  margin: 20px auto;
+  /* margin: 0 auto; */
   width: 100%;
   max-width: 600px;
 }
@@ -40,11 +48,16 @@ p {
   float: left;
   clear: both;
   width: 100%;
+  height: 30%;
   padding: 2rem 1.5rem;
   text-align: center;
-  background: #fff;
-  border-radius: 7px;
-  border: 3px solid #eee;
+  top: 200px;
+  border-radius: 8px;
+  border: 2.5px solid #03838F;
+  backdrop-filter: blur(14px);
+  background-color: rgba(49, 49, 99, 0.1);
+  z-index: 20;
+
   transition: all 0.2s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -52,7 +65,8 @@ p {
           user-select: none;
 }
 .uploader label:hover {
-  border-color: #454cad;
+  border-color: #03838F;
+  box-shadow: 0 8px 16px 0 #03838F;
 }
 .uploader label.hover {
   border: 3px solid #454cad;
@@ -66,6 +80,7 @@ p {
   float: left;
   clear: both;
   width: 100%;
+  justify-content: space-between;
 }
 .uploader #start.hidden {
   display: none;
@@ -139,7 +154,7 @@ p {
 }
 .uploader .btn {
   display: inline-block;
-  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  margin: 3rem 0.5rem 1rem 0.5rem;
   clear: both;
   font-family: inherit;
   font-weight: 700;
@@ -155,7 +170,22 @@ p {
   color: #fff;
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
-  background: #454cad;
-  border-color: #454cad;
+  background: #03838F;
+  border-color: #03838F;
   cursor: pointer;
 }
+.uploader .btn:hover{
+  background-color: #FF747D;
+}
+/* .submit-btn:hover{
+  background-color: #FF747D;
+  margin-top: 44px;
+  background-color: #03838F; 
+  color:white; 
+  font-weight:bold; 
+  border-radius:4px; 
+  outline:none; 
+  border:none; 
+  height: 40px; 
+  width: 78px;
+} */
