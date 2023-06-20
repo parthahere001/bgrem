@@ -57,4 +57,3 @@ uvicorn==0.22.0
 watchdog==3.0.0
 yarl==1.9.2
 psycopg2
-dj-database-url==2.0.0
