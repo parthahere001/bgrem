@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     "mainapp",
     "bootstrap5",
     "rembg",
-    "mainapp.apps.MainappConfig",
+    
 
 ]
 
@@ -88,7 +88,7 @@ WSGI_APPLICATION = "bgremovebackend.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-  'default': dj_database_url.parse('postgres://dbuser:0ZaAE0DyNTTy2rsLpTfxfh3DmMlmmp37@dpg-chodvfm7avja2d8q7ai0-a.oregon-postgres.render.com/mydb_m9y9')
+'default': dj_database_url.parse('postgres://dbuser:0ZaAE0DyNTTy2rsLpTfxfh3DmMlmmp37@dpg-chodvfm7avja2d8q7ai0-a.oregon-postgres.render.com/mydb_m9y9')
 }
 
 CSRF_COOKIE_DOMAIN = None
